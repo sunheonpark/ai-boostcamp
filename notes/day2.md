@@ -508,3 +508,15 @@ print(s)
 + black 모듈을 활용하여 거의 pep8에 근접한 수준으로 수정( 파일을 내용을 직접 변경 )
   + black {{파일명.py}}
 
+### 추가 학습
+#### 1. git 설치
++ 설치 URL : https://git-scm.com/
++ git 명령어
+  + git --version : 버전 확인
+  + git config --global user.name sunheonpark : 이름 설정
+  + git config --global user.email. sunheonpark@gmail.com : 이메일 설정
+  + 원하는 경로로 이동 -> git clone {{git URL}} : git에 있는 내용을 다운로드
+  + git add {{파일명}} : 파일을 git에 추가
+  + git status : 추가된 git 현황을 확인
+  + git commit -m "Add Text File [{{파일명}}]" : 설명을 추가해서 커밋
+  + git push : commit한 내용을 git에 적용

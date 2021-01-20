@@ -522,3 +522,6 @@ print(s)
   + git status : 추가된 git 현황을 확인
   + git commit -m "Add Text File [{{파일명}}]" : 설명을 추가해서 커밋
   + git push : commit한 내용을 git에 적용
+
+#### 2. unnitest 명령어
++ python -m unittest test_*.py

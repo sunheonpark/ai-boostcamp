@@ -286,9 +286,9 @@ for i, v in enumberate("ABC"):
 set_text = list(set(text.split()))
 {v : v.lower() for i , v in enumerate(my_str)}  # dict형태로도 반환
 ```
-# 참고 - print문 end값 설정
-print(city, end="\t")
-print(city, end=" ")
++ 참고 - print문 end값 설정
+    + print(city, end="\t")
+    + print(city, end=" ")
 
 #### 7. zip
 + 두 개의 list의 값을 병렬적으로 추출

@@ -309,7 +309,7 @@ eng = (90, 80, 70)
 # 활용 예시 - enumerate & zip
 for i, values in enumerate(zip(alist,blist))    # 값들을 번호별로 묶을 수 있음
     print(i, values)
-    
+```    
 #### 8. lambda
 + 함수 이름 없이, 함수처럼 쓸 수 있는 익명함수 ( 수학의 람다 대수에서 유래 )
 + Python 3부터는 권장하지 않으나 여전히 많이 쓰임
@@ -516,4 +516,42 @@ asterist_test(10, **data) # b=1, c=2, d=3의 형태로 언패킹한다.
 ex = ([1, 2], [3, 4], [5, 6], [5, 6], [5, 6])
 for value in zip(*ex):  # (1, 3, 5, 5, 5)   (2, 4, 6, 6, 6) 언패킹으로 같은 값으로 묶음
     print(value)
+```
+
+### 추가학습
+#### 1. 기본적인 Machine Learning의 용어와 개념 설명
++ 머신 러닝의 유형
+    + Supervised learning : 지도학습 - label O
+    + unsupervised learning : 비지도학습 - label X
+
++ Supervised learning의 Training data Set이란?
+    + 학습을 위한 데이터 셋이 있다. feature와 label로 구성
+    + 학습을 통한 모델에 값을 넣으면 예측 값을 반환
+
++ Supervised learning의 유형
+    + regression (회귀분석)
+        + ex) 시험 성적 예측 : 0 ~ 100
+    + binary classification
+        + ex) 합격 여부 : Pass, Non-Pass
+    + multi-label classification
+        + ex) 학점 : A, B, C, D and F
+        
+#### 2. ML lab 01 - TensorFlow의 설치및 기본적인 operations
++ TensorFlow란?
+    + data flow graphs를 사용하는 컴퓨팅 연산을 위한 라이브러리
+    + 파이썬 라이브러리
+    + 여러가지 지표를 기준으로 봤을떄 ML 중 Tensor Flow가 1위
+
++ Data Flow Graph란?
+    + 노드(Nodes)들은 수학적인 연산을 의미한다.
+    + 엣지(Edges)는 여러 행의 데이터(Tensors)을 의미한다. (데이터의 흐름이 시각화)
+
++ TensorFlow 설치하는 방법
+    + pip install --upgrade tensorflow
+    + pip install --upgrade tensorflow-gpu (GPU를 사용하는 경우)
+
++ TensorFlow 확인
+``` python
+import tensorflow as tf  #import
+tf.__version__  # 버전확인
 ```

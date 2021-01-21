@@ -188,7 +188,7 @@ sorted(Counter(text).items(), key=lambda t : t[1], reverse=True)
 #### 11. namedtuple
 + Tuple 형태로 Data 구조체를 저장하는 방법
 + 저장되는 data의 variable을 사전에 지정해서 저장함
-+ 파이썬에서는 class를 많이 
++ 파이썬에서는 class를 많이 사용함
 ``` python
 # 기본 사용법    
 from collections import namedtuple

@@ -28,7 +28,7 @@ a.pop()    # 20 출력+마지막 데이터 제거
 + 함수의 반환 값등 사용자의 실수에 의한 에러를 사전에 방지
 ``` python
 # 기본 사용법
-t = ()
+t = (1)      # 정수 1을 의미 - Tuple X
 t = (1, )    # 값이 하나인 Tuple은 반드시 "," 를 붙여야 함
 ```
 #### 4. 집합 (set)
@@ -511,7 +511,7 @@ print(*data)
 def asterisk_test(a, b, c, d):
     print(a, b, c, d)
 data = {"b":1 , "c":2, "d":3}
-asterist_test(10, **data) # b=1, c=2, d=3의 형태로 언패킹한다.
+asterisk_test(10, **data) # b=1, c=2, d=3의 형태로 언패킹한다. (argument에서만 활용 가능한 것으로 판단)
 
 ex = ([1, 2], [3, 4], [5, 6], [5, 6], [5, 6])
 for value in zip(*ex):  # (1, 3, 5, 5, 5)   (2, 4, 6, 6, 6) 언패킹으로 같은 값으로 묶음

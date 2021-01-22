@@ -373,11 +373,11 @@ print("Binary number is", result)
 len(a) | 문자열의 문자 개수를 반환
 a.upper() | 대문자로 변환
 a.lower() | 소문자로 변환
-a.capitalize() | 첫 문자를 대문자로 변환
-a.titile() | 제목 형태로 변환, 띄워쓰기 후 첫 글자만 대문자
+a.capitalize() | 첫 문자를 대문자로 변환, "i love you -> I love you"
+a.title() | 제목 형태로 변환, "i love you -> I Love You"
 a.count('abc') | 문자열 a에 'abc'가 들어간 횟수 반환
 a.find('abc') | 문자열 a에 'abc'가 들어간 위치(오프셋) 반환
-a.rfind('abc') | 문자열 a에 'abc'가 들어간 위치(오프셋) 반환
+a.rfind('abc') | 문자열 a에 'abc'가 들어간 위치(오프셋) 반환 - 우측부터 탐색
 a.startswith('abc') | 문자열 a가 'abc'로 시작하는 문자열여부 반환 
 a.endswith('abc') | 문자열 a가 'abc'로 끝나는 문자열여부 반환
 a.strip() | 좌우 공백을 없앰

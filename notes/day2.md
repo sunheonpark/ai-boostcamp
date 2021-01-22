@@ -456,7 +456,7 @@ print(s)
   print(factorial(int(input("Input Number for Factorial Calculation: "))))
 ```
 
-#### 10. Function Type Hind
+#### 10. Function Type Hint
 + 파이썬의 dynamic typing 기능은 처음 함수를 사용하는 사용자가 interface를 알기 어렵다는 단점이 있음
 + python 3.5 버전 이후로는 type hints 기능 제공
 ``` python

@@ -128,74 +128,36 @@ print(beta_gd)
     + 아래는 x = 2, y =3 그리고 x = 2, y = 3, z = 2에 대한 표현
 + 선형대수에서 벡터는 어떤 대상 사이의 상호작용을 해석하는데 활용
 
-$$
-\begin{bmatrix}
-2 \\
-3
-\end{bmatrix}
+![캡처](https://user-images.githubusercontent.com/44515744/105861909-8de29480-6032-11eb-97e2-3f66e8a6f37e.JPG)
 
-\begin{bmatrix}
-2 \\
-3 \\
-2
-\end{bmatrix}
-$$
 
 #### 2. 벡터의 계산
 + 벡터 V와 벡터 W를 더한다면 벡터 V에 벡터 W의 꼬리를 연결하고, 벡터 V의 꼬리에서 부터 벡터 W의 머리를 이은 새로를 벡터가 결과가 됨
 + 벡터는 거리와 방향을 가진 움직임을 나타내는 것
 
-$$
-\begin{bmatrix}
-1 \\
-2
-\end{bmatrix}
-+
-\begin{bmatrix}
-3 \\
--1
-\end{bmatrix}
-=
-\begin{bmatrix}
-1 + 3 \\
-2 + -1
-\end{bmatrix}
-$$
+![캡처](https://user-images.githubusercontent.com/44515744/105861881-86bb8680-6032-11eb-9dc2-04accfd204e5.JPG)
 
 + 벡터에 곱을한다면 이 수치만큼 벡터의 길이가 변경됨, 음수를 곱하면 반대 방향으로 방향도 변경
 + 이러한 늘이고, 줄이고, 뒤집는 과정을 스케일이라고 함
 + 곱해지는 상수들을 스칼라라고 함
 + 벡터의 상수배/스칼라배란 각 항에 그 스칼라를 곱하는 것을 의미
 
-$$
-2 *
-\begin{bmatrix}
-3 \\
--1
-\end{bmatrix}
-=
-\begin{bmatrix}
-2 * 3\\
-2 * -1
-\end{bmatrix}
-$$
+![캡처](https://user-images.githubusercontent.com/44515744/105861844-7d321e80-6032-11eb-86ef-607b820e5d39.JPG)
 
 #### 3. 선형 결합
 + 서로 다른 벡터를 스케일하고 더하여 새 벡터를 얻는 모든 연산을 선형 결합이라고 함
 + 좌표평면의 벡터 [2, 3]는 2와 3의 각각의 스칼라로 볼 수 있음
-+ 이때 오른쪽을 가리키는 벡터를 $\hat{i}$로 표시하고 'i햇'이나 x-단위벡터라 부름
-+ 이때 위를 가리키는 벡터를 $\hat{j}$로 표시하고 'j햇'이나 y-단위벡터라 부름
++ 이때 오른쪽을 가리키는 벡터를 i-hat로 표시하고 'i햇'이나 x-단위벡터라 부름
++ 이때 위를 가리키는 벡터를 j-hat로 표시하고 'j햇'이나 y-단위벡터라 부름
 + 이 개념으로 벡터를 '스케일된 두 벡터의 합'으로 볼 수 있음
-    + (2)$\hat{i}$ + (3)$\hat{j}$
-+ $\hat{i}$와 $\hat{j}$를 xy 좌표계의 "기저벡터"라고 함
+    + (2)*i-hat + (3)*j-hat
++ i-hat와 j-hat를 xy 좌표계의 "기저벡터"라고 함
 + 임의의 두 벡터에 각각의 임의의 스칼라를 택해서 각 벡터를 스케일한 뒤 이를 더하면 모든 2차원 벡터를 만들 수 있다.
 + 두 벡터를 스케일하고 더하여 새 벡터를 얻는 모든 연산을 선형결합이라고 부름
 + x,y가 아닌 다른 기저 벡터 v,w를 사용하면 여전히 숫자쌍과 2차원 벡터 사이의 상호작용을 유효하게 보여주지만, 결과 값은 표준 기저 i햇과 j햇을 사용한 것과 다르다. ( 축을 바꾼 경우에 대한 예시 )
     + 서로 다른 좌표계 사이의 정확한 관계를 설명하는 내용을 이후에 배울 예정
 
-$$
-    a\vec{v} + b\vec{w}
-$$
+![캡처](https://user-images.githubusercontent.com/44515744/105861680-5378f780-6032-11eb-8906-8d8723c6757d.JPG)
 
 + 두 스칼라 중 하나는 고정해놓고 나머지 하나의 값을 자유롭게 넣는다면. 벡터의 머리가 한 직선을 그리게 됨
 
@@ -214,24 +176,18 @@ $$
 + 두 벡터의 선형 생성 : 끝점이 평면위에 위치하는 모든 가능한 벡터들의 집합
 + 세 벡터의 선형 결합
 
-$$
-    a\vec{v} + b\vec{w} + c\vec{u}
-$$
+![캡처](https://user-images.githubusercontent.com/44515744/105861558-30e6de80-6032-11eb-8888-c5d65c280bc4.JPG)
 
 + 벡터들의 생성은 모든 가능한 선형결합의 집함
 + 세 번째 벡터가 다른 두 벡터의 선형생성에 놓여있다면, 생성은 변화하지 않고 똑같은 평면에 갇힘
 + 선형 종속 : 벡터들 중 최소한 하나는 불필요한 경우, 생성에 아무것도 더하지 못하는 경우
     + 이때 벡터 중 하나가 다른 벡터들의 선형결합으로 표현될 수 있음
 
-$$
-    \vec{u} = a\vec{v} + b\vec{w}
-$$
+![캡처](https://user-images.githubusercontent.com/44515744/105861530-288ea380-6032-11eb-8b36-d0a2fbaef977.JPG)
 
 + 선형 독립 : 벡터 모두가 각자 생성에 다른 차원을 구성하는 경우
 
-$$
-    \vec{u} \ne a\vec{v} + b\vec{w}
-$$
+![캡처](https://user-images.githubusercontent.com/44515744/105861487-1f053b80-6032-11eb-852f-b513e6471b0d.JPG)
 
 + 벡터 공간의 기저 : 공간 전체를 생성하는 선형 독립인 벡터의 집합
 
@@ -246,99 +202,24 @@ $$
 + 선형의 변환은 두 개의 기저벡터(i-hat, j-hat)이 어떻게 변하는지만 알면 해결
 + 변환전에 v벡터를 이루는 i-hat 과 j-hat의 어떤 선형 결합은 변환 후에도 유지됨
     + i-hat과 j-hat의 변형위치만 알면, 벡터 v를 추론할 수 있음
-    + $\vec{v} = -1\hat{i} + 2\hat{j}
+    + 벡터 v = -1 x i-hat + 2 x j-hat
 
-$$
-\begin{bmatrix}
-x \\
-y
-\end{bmatrix}
-->
-x\hat{i} + y\hat{j}
-=
-x
-\begin{bmatrix}
-1 \\
-0
-\end{bmatrix}
-+
-y
-\begin{bmatrix}
-0 \\
-1
-\end{bmatrix}
-=
-\begin{bmatrix}
-x \\
-y
-\end{bmatrix}
-$$
-
-$$
-\begin{bmatrix}
-x \\
-y
-\end{bmatrix}
-->
-x
-\begin{bmatrix}
-1 \\
--2
-\end{bmatrix}
-+
-y
-\begin{bmatrix}
-3 \\
-0
-\end{bmatrix}
-=
-\begin{bmatrix}
-1x + 3y \\
--2x + 0y
-\end{bmatrix}
-$$
+![캡처](https://user-images.githubusercontent.com/44515744/105861366-fb41f580-6031-11eb-83da-3eddc331d9d6.JPG)
 
 + 변형된 i-hat(3,-2)과 j-hat(2,1)은 2x2 Matrix로 표현한다 
 
-$$
-\begin{bmatrix}
-1 & 3 \\
--2 & 0
-\end{bmatrix}
-$$
+![캡처](https://user-images.githubusercontent.com/44515744/105861321-efeeca00-6031-11eb-8546-9723f79baf6d.JPG)
+
 
 #### 7. Rotation 변환 
 + 모든 공간을 시계 반대방향 90도로 돌리게 되면 i-hat의 좌표는(0,1). j-hat의 좌표는 (-1,0)이 된다. 다른 벡터들의 변화를 파악하기 위해서는 아래와 같이 곱하기만 하면 된다.
 
-$$
-\begin{bmatrix}
-0 & -1 \\
-1 & 0 
-\end{bmatrix}
-\begin{bmatrix}
-x \\
-y
-\end{bmatrix}
-=
-\begin{bmatrix}
-0x-y \\
-x+0y
-\end{bmatrix}
-$$
+![캡처](https://user-images.githubusercontent.com/44515744/105861287-e5cccb80-6031-11eb-9f6c-55874146df3b.JPG)
 
 #### 8. Shear 변환 ( 격자가 기울어진다 - 미는 )
 + i-hat(1,0)은 고정이고 j-hat(1,1)이 움직인 변환
 
-$$
-\begin{bmatrix}
-1 & 1 \\
-0 & 1
-\end{bmatrix}
-\begin{bmatrix}
-x \\
-y
-\end{bmatrix}
-$$
+![캡처](https://user-images.githubusercontent.com/44515744/105861242-d9e10980-6031-11eb-83d9-68e95767c14a.JPG)
 
 #### 9. 행렬
 + 기저벡터들의 변형후 좌표값
@@ -352,147 +233,35 @@ $$
 + 이 선형변환 또한 변환된 기저벡트의 좌표로 파악할 수 있다.
 + 좌측 Shear 변환, Roatation 변환에 대한 행렬은 우측의 Composition된 행렬을 곱한것과 동일한 결과
 
-$$
-\begin{bmatrix}
-1 & 1 \\
-0 & 1
-\end{bmatrix}
-(
-\begin{bmatrix}
-0 & -1 \\
-1 & 0
-\end{bmatrix}
-\begin{bmatrix}
-x \\
-y
-\end{bmatrix}
-)
-=
-\begin{bmatrix}
-1 & -1 \\
-1 & 0
-\end{bmatrix}
-\begin{bmatrix}
-x \\
-y
-\end{bmatrix}
-$$
+![캡처](https://user-images.githubusercontent.com/44515744/105861192-cb92ed80-6031-11eb-89a4-09b61b65d63b.JPG)
 
 + 두 행렬의 곱셈은 기하학적으로 한 변환을 적용하고나서 다른 변환을 적용한 것과 같음
 + 행렬의 변환(곱)은 우측에서부터 읽어야한다. Rotation 변환 -> Shear 변환
       + 이것은 함수를 변수의 왼쪽에다가 적는 함수 표기법에서 유래한 것
 
-$$
-\begin{bmatrix}
-1 & 1 \\
-0 & 1
-\end{bmatrix}
-\begin{bmatrix}
-0 & -1 \\
-1 & 0 
-\end{bmatrix}
-=
-\begin{bmatrix}
-1 & -1 \\
-1 & 0
-\end{bmatrix}
-$$
+![캡처](https://user-images.githubusercontent.com/44515744/105861138-bfa72b80-6031-11eb-94c1-b681f3f93bb0.JPG)
 
 #### 11. 3차원 벡터
-+ x축 단위벡터 $\hat{i}$와 y축 단위벡터 $\hat{j}$그리고 z축 단위벡터 $\hat{z}$로 구성됨
++ x축 단위벡터 i-hat와 y축 단위벡터 j-hat그리고 z축 단위벡터 z-hat으로 구성됨
 
-$$
-\begin{bmatrix}
-2 \\
-6 \\
--1
-\end{bmatrix}
-$$
+![캡처](https://user-images.githubusercontent.com/44515744/105861033-9e463f80-6031-11eb-81fc-94aae0426c4e.JPG)
 
 #### 12. 3차원 벡터의 변환
 + 만약 y축을 기준으로 90도를 회전하면 아래와 같아짐
-+ 3차원에서 방향을 설명하는 오른손 규칙에 의하면 검지는 \hat{i}, 중지는 \hat{j}, 엄지는 \hat{k}을 의미함.
++ 3차원에서 방향을 설명하는 오른손 규칙에 의하면 검지는 i-hat, 중지는 j-hat, 엄지는 k-hat을 의미함.
 
-$$
-\begin{bmatrix}
-0 \\
-0 \\
--1
-\end{bmatrix}
-
-\begin{bmatrix}
-0 \\
-1 \\
-0
-\end{bmatrix}
-
-\begin{bmatrix}
-1 \\
-0 \\
-0
-\end{bmatrix}
-=
-\begin{bmatrix}
-0 & 0 & 1\\
-0 & 1 & 0\\
--1 & 0 & 0
-\end{bmatrix}
-$$ 
+![캡처](https://user-images.githubusercontent.com/44515744/105860909-76ef7280-6031-11eb-985d-96171e66f657.JPG)
 
 + 3차원 벡터의 변환 값은 2차원 벡터에서 했던 방식과 동일
 + 각 기저벡터들을 벡터로 스케일링해서 합치면 원하는 결과벡터를 얻게됨 
 
-$$
-\vec{v}=
-\begin{bmatrix}
-x \\
-y \\
-z
-\end{bmatrix}
-= x\hat{i}+y\hat{j}+z\hat{k}
-$$
-
-$$
-\begin{bmatrix}
-0 & 1 & 2 \\
-3 & 4 & 5 \\
-6 & 7 & 8
-\end{bmatrix}
-\begin{bmatrix}
-x \\
-y \\
-z
-\end{bmatrix}
-= x
-\begin{bmatrix}
-0 \\
-3 \\
-6
-\end{bmatrix}
-+ y
-\begin{bmatrix}
-1 \\
-4 \\
-7
-\end{bmatrix}
-+z
-\begin{bmatrix}
-2 \\
-5 \\
-8
-\end{bmatrix}
-$$ 
+![캡처](https://user-images.githubusercontent.com/44515744/105860867-65a66600-6031-11eb-8665-196ff0a7a353.JPG)
 
 #### 13. 행렬식
 + 선형변환은 공간을 확대하고 축소시키는 개념으로도 볼 수 있음
-+ 아래 행렬의 경우에는 \hat{i}가 3만큼, \hat{j}가 2만큼 증가하여 이 두 기저벡터를 이루는 사각형의 크기가 기존의 A에서 6A로 6배(2X6) 증가했음을 알 수 있음
++ 아래 행렬의 경우에는 i-hat이 3만큼, j-hat이 2만큼 증가하여 이 두 기저벡터를 이루는 사각형의 크기가 기존의 A에서 6A로 6배(2X6) 증가했음을 알 수 있음
 
-$$
-\begin{bmatrix}
-3 & 0 \\
-0 & 2
-\end{bmatrix} 
-$$
+![캡처](https://user-images.githubusercontent.com/44515744/105860835-5b846780-6031-11eb-93a9-a5b56f54f9a2.JPG)
 
 + 격자선이 평행하고 균등한 거리를 유지하면서 선형변환이 발생하기 때문에 도형도 동일한 비율로 스케일링이 됨
 + 선행변환에 의한 영역의 변화를 나타내는 팩터로 행렬식(determinant)이라고 부름
@@ -501,20 +270,11 @@ $$
 + 주어진 행렬의 행렬식이 0인지 아닌지 확인하는 것은, 계산할 수 있는지 없는지를 알려주는 것
 + det는 음수가 될 수 있음, 이 경우는 공간이 뒤집어질 경우에 해당 (종이 뒷면 뒤집듯이)
     + 이때는 변환 후(뒤집어진 상태)의 i-hat이 j-hat의 좌측으로 오게됨
-+ \hat{i}가 점점 \hat{j}와 가까워지면서 공간이 찌부러진다. i와 j가 하나의 선을 이루게 되면 행력식은 0이 되는데 \hat{i}가 계속 이동하게 되면 행력식 값이 음수가 되는게 더 자연스럽다.
++ i-hat 점점 j-hat와 가까워지면서 공간이 찌부러진다. i와 j가 하나의 선을 이루게 되면 행력식은 0이 되는데 i-hat이 계속 이동하게 되면 행력식 값이 음수가 되는게 더 자연스럽다.
 
-$$
-det(
-\begin{bmatrix}
-3 & 2 \\
-0 & 2
-\end{bmatrix}
-)
-=6
-$$
-
+![캡처](https://user-images.githubusercontent.com/44515744/105860726-3c85d580-6031-11eb-8628-e5115d8e05da.JPG)
 #### 14. 3차원에서의 행렬식
-+ 3차원에서는 \hat{i}, \hat{j}, \hat{k}로 구성된 1x1x1 큐브(정육면체)에 집중한다.
++ 3차원에서는 i-hat, j-hat, k-hat로 구성된 1x1x1 큐브(정육면체)에 집중한다.
 + 변환이 일어나면 큐브는 기울어지고 짜부된 큐브(평행육면체)가 된다.
 + 3차원에서는 평행육면체의 부피값이 행렬식이 된다.
 + 행렬식이 0이면 평면이나,선 또는 점이 됐을 때를 의미한다.
@@ -523,39 +283,9 @@ $$
     + b, c가 0일 경우에는 Area가 정사각형
     + b, c값 중 하나만 0이면 평행사변형
     + b, c가 둘다 0이 아닐 경우에는 평행사변형이 얼마나 대각선 방향으로 늘려지거나 찌그러지는 지를 알려줌
-
-$$
-det(
-\begin{bmatrix}
-a & b \\
-c & d
-\end{bmatrix}
-)=ad-bc
-$$
+    
+![캡처](https://user-images.githubusercontent.com/44515744/105860567-106a5480-6031-11eb-8b5c-057d9a9bccc8.JPG)
 
 + 3차원 행렬식 공식
 
-$$
-det(
-\begin{bmatrix}
-a & b & c \\
-d & e & f \\
-g & h & i
-\end{bmatrix}
-)=adet(
-\begin{bmatrix}
-e & f \\
-h & i
-\end{bmatrix}    
-)-bdet(
-\begin{bmatrix}
-d & f \\
-g & i
-\end{bmatrix}
-)+cdet(
-\begin{bmatrix}
-d & e \\
-g & h
-\end{bmatrix}
-)
-$$
+![캡처](https://user-images.githubusercontent.com/44515744/105860515-05172900-6031-11eb-807f-e5f5263e1bbb.JPG)

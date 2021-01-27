@@ -262,35 +262,8 @@ df.sex_value_counts(sort=True) / len(df) # 전체에서 각 값들의 비율을 
         + X(n x d)
         + W(d x p)
         + b(n x p)
-
-$$
-\begin{bmatrix}
-- & O_1 & - \\
-- & O_2 & - \\
-- & \vdots & - \\
-- & O_n & - \\
-\end{bmatrix}
-=
-\begin{bmatrix}
-- & x_1 & - \\
-- & x_2 & - \\
-- & \vdots & - \\
-- & x_n & - \\
-\end{bmatrix}
-\begin{bmatrix}
-w_11 & w_12 & \cdotx & w_1p \\
-w_21 & w_22 & \cdotx & w_2p \\
-\vdots & \vdots & \ddots & \vdots \\
-w_d1 & w_d2 & \cdotx & w_dp
-\end{bmatrix}
-+
-\begin{bmatrix}
- &  & \cdots & \\
-b_1 & b_2 & \cdots & b_p \\
-&  & \cdots & \\
-\end{bmatrix}
-$$
-
+        
+![캡처](https://user-images.githubusercontent.com/44515744/106008541-bf269780-60fa-11eb-9aa2-9a076c07202f.JPG)
 
 #### 2. softmax 함수
 + 출력 벡터 o에 softmax 함수를 합성하면 확률벡터가 됨

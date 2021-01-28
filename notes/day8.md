@@ -262,35 +262,8 @@ df.sex_value_counts(sort=True) / len(df) # 전체에서 각 값들의 비율을 
         + X(n x d)
         + W(d x p)
         + b(n x p)
-
-$$
-\begin{bmatrix}
-- & O_1 & - \\
-- & O_2 & - \\
-- & \vdots & - \\
-- & O_n & - \\
-\end{bmatrix}
-=
-\begin{bmatrix}
-- & x_1 & - \\
-- & x_2 & - \\
-- & \vdots & - \\
-- & x_n & - \\
-\end{bmatrix}
-\begin{bmatrix}
-w_11 & w_12 & \cdotx & w_1p \\
-w_21 & w_22 & \cdotx & w_2p \\
-\vdots & \vdots & \ddots & \vdots \\
-w_d1 & w_d2 & \cdotx & w_dp
-\end{bmatrix}
-+
-\begin{bmatrix}
- &  & \cdots & \\
-b_1 & b_2 & \cdots & b_p \\
-&  & \cdots & \\
-\end{bmatrix}
-$$
-
+        
+![캡처](https://user-images.githubusercontent.com/44515744/106008541-bf269780-60fa-11eb-9aa2-9a076c07202f.JPG)
 
 #### 2. softmax 함수
 + 출력 벡터 o에 softmax 함수를 합성하면 확률벡터가 됨
@@ -448,9 +421,12 @@ softmax(vec)
     + 그래디언트 벡터는 각 변수 별로 편미분을 계산한 것
     + cost 함수의 그래디언트의 음의 방향은 그냥 벡터일 뿐, 이 벡터는 어떤 방향이 cost 함수를 가장 빠르게 감소시키는지 알려줌
     + cost 함수는 가중치와 bias들을 cost 함수 값이 줄어드는 방향으로 조정할 것
+<<<<<<< HEAD
 
 #### 8. 주어진 훈련 데이터마다 각각의 가중치와 bias에는 어떤일이 일어나는가?
 + 신경망 학습은 그저 cost 함수를 최소화하는 것 뿐
 + cost 함수가 매끄러운 출력을 갖는 것이 중요함, 한발짝씩 내려가면서 최소값을 가질 수 있음
 + 이러한 이유로 인공 뉴런들은 단순히 활성화/비활성화로 결정되지 않고, 연속적인 활성화 같은 갖음
 + 3차원을 넘어가는 다차원을 상상하기는 어려움,
+=======
+>>>>>>> ef00cb1e802e01a589ed65f41fc75ccbbd3ff74f

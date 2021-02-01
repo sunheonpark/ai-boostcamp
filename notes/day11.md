@@ -40,7 +40,7 @@
 + P(θ) = 0.1 사전확률
 + P(ㄱθ) = 0.9 사전확률
 + P(D|θ) = 0.99 민감도(Recall)
-+ P(D|ㄱθ) = 0.1 오탐(False alarm)
++ P(D|ㄱθ) = 0.01 오탐(False alarm)
 + P(ㄱD|ㄱθ) = 0.9 특이도(specitifcity)
 + 양성이 나왔을 때 질병이 걸렸을 확률 - True Positive
 + 양성이 나왔을 때 질병이 걸리지 않았을 확률 - False Positive (1종 오류)
@@ -78,7 +78,7 @@
     + 모델이 배울 수 있는 데이터
     + 데이터를 변형할 수 있는 모델
     + 모델을 학습시키기 위한 loss 함수가 필요
-    + loss 함수를 최소화하기 위한 알고리즘이 필요
+    + loss를 최소화하기 위한 모수에 적용할 알고리즘
 
 #### 3. 데이터 유형
 + Classification : 분류하는 것 ( 개와 고양이를 구분 )
@@ -89,26 +89,24 @@
 
 #### 4. Model
 같은 데이터가 주어졌더라도 모델의 성질에 따라 다른 결과가 나옴, 결과를 잘 만들기 위한 테크닉들이 존재
-+ alexNet : 컨볼루션 신경망
-+ GoogLeNet
-+ ResNet
-+ DenseNet
-+ LSTM
-+ Deep AutoEncoders
-+ GAN
++ alexNet : 컨볼루션 신경망, 2개의 GPU로 병렬 연산을 수행
++ GoogLeNet : 22층으로 구성되어 있으며, 1 x 1 사이즈의 필터로 컨볼루션을 한다. ( 특성맵의 갯수를 줄이는 목적)
++ ResNet : 152개의 층을 가진다. Residual Block을 통해서 입력값을 출력값에 더해줄 수 있도록 지름길을 만들었다.
++ DenseNet : DenseNet은 feature map끼리 Concatenation을 시키는 것이 특징
++ 기타 : LSTM, Deep AutoEncoders, GAN 등등
 
 #### 5. Lost Function
 + 모델이 정해져있고 데이터가 정해져있을 때 이 모델을 어떻게 학습할지에 대한 것
 + 문제를 풀기 위한 근사치, 원하는 결과를 얻는다는 보장이 없음
-+ Regression Task : 뉴럴 네트워크의 출력값과 내가 맞추려는 타겟점 사이의 제곱을 최소화하는 것, MEE(Mean Squared Error)
-+ Classification Task : 뉴럴 네트워크의 출력값과 라벨값과의 차이를 최소화(CE)
-+ Probabilistic Task : 어떤 값이 아니라 값에 대한 평균과 분산으로 MLE 관점으로 문제를 풄 ㅜ 있음
++ Regression Task : 뉴럴 네트워크의 출력값과 내가 맞추려는 타겟점 사이의 제곱을 최소화하는 것, MSE(Mean Squared Error)
++ Classification Task : 뉴럴 네트워크의 출력값과 라벨값과의 차이를 최소화, CE(Classification Error)
++ Probabilistic Task : 어떤 값이 아니라 값에 대한 평균과 분산으로 MLE(Maximum Likelihood Estimation) 관점으로 문제를 풀 수 있음
 
 #### 6. 최적화 방법
 + 데이터가 정해져있고 모델이 정해져있고 loss Function이 정해져 있을때, 네트워크를 어떻게 줄일지에 대한 얘기
     + 뉴럴 네트워크의 파라미터를 loss function에 대해서 1차 미분한 정보를 활용
     + 모델이 학습하지 않은 데이터에 대해 잘동작하는 것이 목적
-+ 여러 알고리즘 
++ 여러 알고리즘이 존재 
     + Dropout
     + Early stopping
     + k-fold validataion
@@ -119,7 +117,7 @@
     + Bayesian Opimization
 
 #### 7. Historical Review
-+ Deep Learning's Most Important Ideas = A Brief Historical Review ( Denny Britz)
++ 역사적인 논문에 대한 내용 : Deep Learning's Most Important Ideas = A Brief Historical Review ( Denny Britz)
 + AlexNet
     + Convolution Net에 대한 것, 224 by 224 이미지를 분류하는 것이 목적 
     + 2012년에 AlexNet이 우승한 뒤로부터 딥러닝이 이 분야에서 계속 1등을 하게됨(기계학습의 판도가 딥러닝으로 바뀜)
@@ -151,10 +149,10 @@
 ### [DLBasic] PyTorch 시작하기
 > PyTorch와 TF2.0(TensorFlow+Keras)를 많이 사용함
 #### 1. 프레임워크 장단점
-+ Keras : TensorFlow를 쉽게 쓰기 위해서 만든 언, 컴퓨터션 그래프(체인 미분용도) Static Graphs를 선언해서 주입
++ Keras : TensorFlow를 쉽게 쓰기 위해서 만든 언어, 컴퓨터션 그래프(체인 미분용도) Static Graphs를 선언해서 주입
 + TensorFlow : 구글에서 만든 프레임워크, 컴퓨터션 그래프(체인 미분용도) Static Graphs를 선언해서 주입
 + PyTorch
-    + Facebook에서 Torch 기반으로 만들 언어, Numpy 쓰듯이 불러오고 싶을때 불러와서 쓸 수 있음
+    + Facebook에서 Torch 기반으로 만든 언어, Numpy를 쓰듯이 불러오고 싶을때 불러와서 쓸 수 있음
     + Numpy + AutoGrad + Function
     + Numpy 구조를 가지는 Tensor 객체로 Array 표현
     + 자동미분을 지원하여 DL 연산을 지원
@@ -162,7 +160,6 @@
 
 #### 2. Colab과 VS Code 연결하기
 + 참고링크 : https://github.com/BoostcampAITech/lecture-note-python-basics-for-ai/blob/main/codes/pytorch/00_utils/colab%20on%20VSCode.md
-
 + 아래 명령어를 Colab에서 실행 후 출력 값을 VS Code에 설정
 ``` python
 !pip install colab_ssh --upgrade
@@ -216,4 +213,10 @@ b.grad # 미분값 반환
 + 함수를 모방하는 Function approximators다.
 
 #### 2. 실습
++ MLP 구축 실습 파일
 https://colab.research.google.com/drive/1V4m7Hs4qYgnhvHAc1k_QXX2wSH9t2V-f?usp=sharing
+
+### [DLBasic] 데이터셋 다루기
++ config, main, util 등으로 객체지향 형태로 코드 구현함
++ Mnist 데이터셋 생성 코드
+https://github.com/pytorch/vision/blob/master/torchvision/datasets/mnist.py

@@ -286,5 +286,3 @@ g.map(sns.histplot, x = "total_bill")
 + 분류 문제에서 정답레이블을 P, 모델 예측을 Q라 두면 최대가능도 추정법은 쿨백-라이블러 발산을 최소화하는 것과 동일
 
 ![CodeCogsEqn (10)](https://user-images.githubusercontent.com/44515744/106243404-b2b25400-624c-11eb-90a5-236da2407005.gif)
-
-### 추가학습

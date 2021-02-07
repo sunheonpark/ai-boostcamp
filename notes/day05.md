@@ -97,7 +97,7 @@ a | 추가모드
 f = open("i_have_a_dream.txt", "r")
 contents = f.read() # 모든 내용을 가져온다.
 contents = f.readlines() # \n을 기준으로 다 잘라서 list로 가져온다.
-contenst = f.readline() # 데이터가 많아 한번에 메모리에 올릴 수 없다면 readline을 활용
+contents = f.readline() # 데이터가 많아 한번에 메모리에 올릴 수 없다면 readline을 활용
 print(contents)
 f.close()
 
@@ -359,7 +359,6 @@ with open("customers.csv", "r", encoding="cp949") as f:
 # csv 쓰기
 with open("result_customver.csv", "w", encoding="utf8") as sf:
     writer = csv.writer(sf, delimiter='\t', quotechar="'", quoting=csv.QUOTE_ALL)
-    writer.writerow(header)
     writer.writerow(header)
     for row in seoung_nam_data:
         writer.writerow(row)

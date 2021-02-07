@@ -72,9 +72,9 @@ for k,v in country_code.items():    # Dict Data 출력(언패킹 방식)
     print("Key : ", k)
     print("Value : ", v)
     
-    country_code.keys()    # Dict 키 값만 출력
-    country_code.values()    # Dict 값만 출력
-    country_code["Korea"]    # 키가 "Korea"인 값 출력
+country_code.keys()    # Dict 키 값만 출력
+country_code.values()    # Dict 값만 출력
+country_code["Korea"]    # 키가 "Korea"인 값 출력
     
 # 활용 예시 - Python 명령어 사용횟수 계산 코드
 import csv
@@ -96,7 +96,7 @@ for data in command_data:
         command_counter[data[1]] = 1
    
 dictlist = []
-for key, value in command_counter.items):
+for key, value in command_counter.items():
     temp = [key, value]
     dictlist.append(temp)
     
@@ -118,7 +118,7 @@ from collections import namedtuple
 
 #### 7. deque
 + Stack과 Queue를 지원하는 모듈
-+ List에 비해 효율적인=빠른 자료 저장 방식을 지원함
++ List에 비해 효율적이고 빠른 자료 저장 방식을 지원함
 + rotate, reverse 등 Linked List의 특성을 지원함
 + 기존 list 형태의 함수를 모두 지원함
 ``` python
@@ -149,18 +149,12 @@ deque_list.extendleft([5,6,7])    #리스트를 좌측에 붙인다.
 ``` python
 # 기본 사용법
 from collections import defaultdict
-d = defaultdict(lamnda : 0) # 기본 값은 함수로 넣어야한다. 0을 return하는 함수를 넣을 수도 있다.
+d = defaultdict(lambda : 0) # 기본 값은 함수로 넣어야한다. 0을 return하는 함수를 넣을 수도 있다.
 
 # 활용 예시 - 하나의 지문에서 단어들이 몇개가 있는지 출력
-d = defaultdict(labda : 0)
+d = defaultdict(lambda : 0)
 for word in text.split():
     d[word] += 1    # 초기값 지정을 해서 바로 수학적 연산이 가능함
-
-sorted_dict = OrderDict()
-for i, v in sorted(d.itmes(), key=get_key, reverse=True):
-    sorted_dict[i] = v
-print(sorted_dict)
-    
 ```
 
 #### 10. Counter
@@ -168,6 +162,7 @@ print(sorted_dict)
 ``` python
 # 기본 사용법
 from collections import Counter
+
 ball_or_strike_list = ["B", "S", "S", "S", "B"]
 c = Counter(ball_or_strike_list)    # 출력 Counter({'B':2, 'S':3})
 
@@ -423,6 +418,7 @@ print(type(gen_ex))
 
 list(gen_ex) # 이때 메모리에 올라온다.
 ```
+
 #### 13. Function Passing Arguments
 + Keyword arguments
     + 함수에 입력되는 parameter의 변수명을 사용, arguments를 넘김
@@ -452,7 +448,7 @@ print_something("Sungchul")
     + Asterisk(*) 기호를 사용하여 함수의 parameter를 표시함
     + 입력된 값은 tuple type으로 사용할 수 있음
     + 가변인자는 오직 한 개만 맨 마지막 parameter 위치에 사용가능
-    + 파라미터는 *arges로 사용
+    + 파라미터는 *args로 사용
 ``` python
 # 기본 활용법
 def asterisk_test(a, b, *args):
@@ -490,6 +486,7 @@ kwrags_test_3(3,4,5,6,7,8,9, first=3, second=4, third=5) # one - 3, two - 4, arg
 + asterisk - unpacking a container
     + tuple, dict 등 자료형에 들어가 있는 값을 unpacking
     + 함수의 입력값, zip 등에 유용하게 사용가능
+    
 ``` python
 # 기본 활용법
 def asterisk_test(a, *args): # 파라미터 가변인자 선언( 여기서 *는 여러개의 가변인자를 받는 용도로 사용 )

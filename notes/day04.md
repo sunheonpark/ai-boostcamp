@@ -37,7 +37,7 @@ park = SoccerPlayer("park", "WF", 13)
 ```
 
 #### 6. 파이썬에서 __ 의미
-+ __는 특수한 예약 함수나 변수 그리고 함수명 변경(맨글링)으로 사용
++ __는 특수한 예약 함수나 변수 그리고 함수명 변경(맹글링)으로 사용
     + 관련 함수로는 __main__ , __add__ , __str__ , __eq__ 등이 있음
 ``` python
 # 기본 활용법
@@ -54,7 +54,7 @@ abc + park # + 연산에 대해 정의가 됨
 if __name__ == '__main__':
     #파일이 메인일 때만 실행하는 코드 추가
     
-{{함수명}}__doc__   # 함수 선언시 입력한 docstring 출력
+{{함수명}}.__doc__   # 함수 선언시 입력한 docstring 출력
     
 ```
 
@@ -71,7 +71,7 @@ abc.change_back_number(7)
 abc.back_number = 7   # 직접 변경도 가능하나 권장하는 방식은 아님
 ```
 
-#### 8. OOP Characteristics
+#### 8. OOP(Object-oriented programming) Characteristics
 + 객체 지향 언어는 실제 세상을 모델링하는 것
 + Inheritance : 상속
     + 부모클래스로 부터 속성과 Method를 물려받은 자식 클래스를 생성하는 것

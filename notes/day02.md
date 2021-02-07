@@ -58,7 +58,7 @@ boolean | 참 또는 거짓 | True, False | data = True
 ```
 + 컴퓨터의 반올림 오차
   + 단순한 실수도 이진수로 변환하면 무한소수가 됨
-  + 반올림 오차는 충분히 작아 반올림 하여 일반적으로 문제가 되지 안흥ㅁ
+  + 반올림 오차는 충분히 작아 반올림 하여 일반적으로 문제가 되지 않음
 + [참고] 컴퓨터는 실리콘이라는 재료로 만든 반도체 구성
   + 반도체는 특정 자극을 줬을 때 전기를 통할 수 있게 하는 물질 (전류의 흐름의 제어가 가능) 
   + 전류가 흐를 때 1, 흐르지 않을 때는 0으로만 숫자를 표현할 수 있음
@@ -76,7 +76,7 @@ boolean | 참 또는 거짓 | True, False | data = True
 ``` python
   cities[5:10] # index 5부터 9까지를 반환
   cities[:] # 처음부터 끝까지
-  cities[-9: # : 마지막 index : -1 , 그 앞 index : -2  - index를 끝에서부터 접근할 수 있음
+  cities[-9] # : 마지막 index : -1 , 그 앞 index : -2  - index를 끝에서부터 접근할 수 있음
   cities[::2] # 2칸 단위로 슬라이싱
   cities[::-1] # 역으로 슬라이싱
 ```
@@ -166,7 +166,7 @@ boolean | 참 또는 거짓 | True, False | data = True
   print(f"value is {value}")
   print(f'{name:20}')    #20칸, 좌측 정렬
   print(f'{name:*>20}')    #20칸, 나머지 별표, 우측 정렬
-  print(f'{name:*%20}')    #20칸, 가운데 정렬, 나머지 별포
+  print(f'{name:*^20}')    #20칸, 가운데 정렬, 나머지 별포
   
   number = 3.141592653589793
   print(f'{number:10.2f}')

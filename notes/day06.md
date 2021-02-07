@@ -5,7 +5,7 @@
 #### 1. 코드로 방정식 표현하기
 + 다양한 Matrix 계산을 어떻게 만들 것인가?
 + 굉장히 큰 Matrix에 대한 표현
-+ 처리 속도 문제 = Python은 Interpreter ㅇ너어
++ 처리 속도 문제 = Python은 Interpreter 
 
 #### 2. 파이썬 과학 처리 패키지 - numpy
 + 파이썬의 고성능 과학 계산용 패키지
@@ -13,7 +13,7 @@
 + 일반 List에 비해 빠르고, 메모리 효율적
 + 반복문 없이 데이터 배열에 대한 처리를 지원함
 + 선형대수와 관련된 다양한 기능을 제공함
-+ C, C++, 포르탈ㄴ 등의 언어오 ㅏ통합 가능
++ C, C++ 등의 언어와 통합 가능
 
 #### 3. ndarray란?
 + 일반적으로 numpy는 np라는 alias(별칭) 이용해서 호출함
@@ -82,7 +82,6 @@ np.array([[1, 2, 3], [4.5, 5, 6]], int).size # 6 - 데이터의 개수
 + reshape : Array의 shape의 크기를 변경함, element의 개수는 동일
 + 결과가 반환되므로 기존 데이터에는 변화가 없다.
     + (2, 4) -> (8,)
-+ 
 
 ``` python
 # 기본 활용법
@@ -100,7 +99,7 @@ np.array(test_matrix).reshape(-1,2).shape # -1은 size를 기반으로 개수를
 test_matrix = [[[1,2,3,4],[1,2,5,8]], [[1,2,3,4], [1,2,5,8]]]
 test_matrix = np.array(test_matrix)
 test_matrix.shape # (2, 2, 4)
-test_matrix.flatten().shape # (16.)
+test_matrix.flatten().shape # (16,)
 ```
 
 #### 10. indexing & slicing
@@ -138,8 +137,8 @@ a[::2,::3] # 2 step 행, 3 step 컬럼 조회
 + arange : array의 범위를 지정하여, 값의 list를 생성하는 명령어
 ``` python
 # 기본 활용법
-np.arrange(30) # integer로 0부터 29까지 배열 추출
-np.arrange(0, 5, 0.5) # 0 <= n < 5까진 0.5 스텝으로 배열 추출
+np.arange(30) # integer로 0부터 29까지 배열 추출
+np.arange(0, 5, 0.5) # 0 <= n < 5까진 0.5 스텝으로 배열 추출
 ```
 + zeros : 0으로 가득찬  ndarray 생성
 ``` python
@@ -150,7 +149,6 @@ np.ones((2,5))
 + empty - shape만 주어지고 비어있는 ndarray 생성 ( memory initialization이 X )
     + 공간은 지정되지만 초기화가 안되므로 이전에 사용하던 다른 값이 존재할 수도 있음
 ``` python
-np.empty(shape
 # 기본 활용법=(10,), dtype=np.int8)
 np.empty((3,5))
 ```
@@ -183,28 +181,29 @@ np.eye(3,5, k=2) # k=2는 시작하는 컬럼이 2라는 의미
 # 기본 활용법
 matrix = np.arrange(9).rshape(3,3)
 np.diag(matrix) # array([0,4,8])
-np.diag(matrixm k=1) # array([1,5]) eye와 동일하게 시작열 지정 가능
+np.diag(matrix, k=1) # array([1,5]) eye와 동일하게 시작열 지정 가능
 ```
 
 + random sampling : 데이터 분포에 따른 sampling으로 array를 생성
 ``` python
 # 기본 활용법
-np.random.uniform(0, 1, 10).reshape(2,5) # 균등분포
+np.random.uniform(0,1,10).reshape(2,5) # 균등분포
 np.ramdom.normal(0,1,10).resahpe(2,5) # 정규분포
 np.ramdom.exponential(scale=2, size=100) # 공부하기
 ```
 
 #### 12. Operation Functions
 + axis : 모든 operation function을 실행할 떄 기준이 되는 dimension 축
-    + 3 x 4를 만들면 3은 axis=0 4는 axix=1이 된다 새로 dimension이 추가될 때마다 1씩 밀린다
+    + 3 x 4를 만들면 3은 axis=0 4는 axis=1이 된다 새로 dimension이 추가될 때마다 1씩 밀린다
+    
 ![캡처](https://user-images.githubusercontent.com/44515744/105655503-8375ad00-5f03-11eb-9efd-2fbf52beceaf.JPG)
 ``` python
 # 기본 활용법
 test_array = np.arange(1,13).reshape(3,4)
 test_array.sum(dtype=np.float) # 모든 요소를 더한 값을 반환
-text_array.sum(axis=1) #4 즉, 열을 기준으로 더한 값 array([10,26,42])
-text_array.sum(axis=0) #3 즉, 행을 기준으로 더한 값 array([15,18,21,24])
-(3,3,4) # 3 = axix 0, 3 = axis 1, 4 = axis 0
+test_array.sum(axis=1) #4 즉, 열을 기준으로 더한 값 array([10,26,42])
+test_array.sum(axis=0) #3 즉, 행을 기준으로 더한 값 array([15,18,21,24])
+(3,3,4) # 3 = axis0, 3 = axis 1, 4 = axis 0
 
 test_array.mean() # 평균
 test_array.mean(axis=0) # 평균
@@ -217,20 +216,20 @@ test_array.std(axis=0) #표준편차
 ``` python
 # 기본 활용법
 a = np.array([1,2,3])
-a = np.array([2,3,4])
+b = np.array([2,3,4])
 np.vstack((a,b)) # 수직으로 쌓는다 Vertical Stack, array([[1,2,3],[2,3,4]])
 
 a = np.array([[1],[2],[3])
-a = np.array([[2],[3],[4])
+b = np.array([[2],[3],[4])
 np.hstack((a,b)) # 수평으로 쌓는다 Horizontal STack. array[[1,2],[2,3],[3,4]]
 
 a = np.array([1,2,3])
-a = np.array([2,3,4])
-np.concatenate((a,b), axis=0) # axis는 붙였을때 생성되는 결과값의 axix라고 생각
+b = np.array([2,3,4])
+np.concatenate((a,b), axis=0) # axis는 붙였을때 생성되는 결과값의 axis라고 생각
 
 a = np.array([[1],[2],[3])
-a = np.array([[2],[3],[4])
-np.concatenate((a,b), axis=1) # axis는 붙였을때 생성되는 결과값의 axix라고 생각
+b = np.array([[2],[3],[4])
+np.concatenate((a,b), axis=1) # axis는 붙였을때 생성되는 결과값의 axis라고 생각
 
 a = np.array([[1,2], [3,4]])
 b = np.array([5, 6])
@@ -298,9 +297,9 @@ a = np.arange(10)
 a < 4 # broadcasting이 되어 각 요소마다 비교가 됨 [True, True, True .....] 반환 Boolean Array
 
 np.any(a>5), np.any(a<0) # or 조건, 요소 중 하나라도 True면 전체가 True
-np.all(a>5) # and 조건, 요소 모두가 참이면 True 아니면 Fals
+np.all(a>5) # and 조건, 요소 모두가 참이면 True 아니면 False
 
-a = np.array([1, 3, 0], flaot)
+a = np.array([1, 3, 0], float)
 np.logical_and(a > 0, a < 3) # and 조건의 condition
 
 b = np.array([True, False, True], bool)
@@ -342,7 +341,7 @@ test_array[test_array > 3] # 조건이 True인 index의 element만 추출
 ``` python
 a = np.array([2, 4, 6, 8], float)
 b = np.array([0, 0, 1, 3, 2, 1], int) # 반드시 integer로 선언(index 값)
-a[b] #bracket index, b 배열의 ㄱ밧을 index로 하여 a의 값들을 추출
+a[b] #bracket index, b 배열의 을 index로 하여 a의 값들을 추출
 a.take(b) # a[b]와 동일
 
 a = np.array([[1, 4], [9, 16]], float)
@@ -428,7 +427,7 @@ def angle(x, y):
 + 내적은 두 벡터의 유사도를 측정하는데 사용 가능하다.   
 
 ### [AI Math 2강] 행렬이 뭐에요?
-+ 행렬(matrix0은 벡터를 원소로 가지는 2차원 배열
++ 행렬(matrix)은 벡터를 원소로 가지는 2차원 배열
 + numpy에서는 행(row)이 기본 단위
 + 벡터는 소문자, 행렬은 대문자 볼드체로 표시
 + 행렬은 벡터를 원소로 가지는 2차원 배열
@@ -456,7 +455,7 @@ X @ Y # numpy에서는 @연산으로 행렬곱을 한다.
 ```
 
 #### 행렬의 내적
-+ 넘파이의 np.inner은 i 번재 행벡터와 j번째 행벡터 사이의 내적을 성분으로 가지는 행력을 계선
++ 넘파이의 np.inner은 i 번째 행벡터와 j번째 행벡터 사이의 내적을 성분으로 가지는 행렬을 계산
 + 행의 크기가 같아야 함
 + 수학에서 말하는 내적과는 다름
 
@@ -468,7 +467,7 @@ X @ Y # numpy에서는 @연산으로 행렬곱을 한다.
 
 #### 역행렬 이해하기
 + 어떤 행렬 A의 연산을 거꾸로 되돌리는 행렬을 역행렬(inverse matrix)라 부르고 A^-1라 표기
-+ 역행렬은 행과 열 숫자가 같고 행렬식이 0이 아닌 경우에만 계산할 수 있다.
++ 역행렬은 행과 열 숫자가 같고(정방행렬) 행렬식이 0이 아닌 경우에만 계산할 수 있다.
 + 항등행렬 : 임의의 벡터 또는 행렬을 곱했을 때 자기자신이 나오는 행렬
 + A^-1 * A = I
 

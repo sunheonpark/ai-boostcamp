@@ -3,7 +3,7 @@
 > Pandas 라이브러리의 groupby,pivot_table,joint method (merge / concat),Database connection,Xls persistence 다섯가지 기능에 대한 내용
 #### 1. Groupby 1
 + SQL groupby 명령어와 같음
-+ split(index를 기준으로 분리) -> apply(함수) -> combine(병합) 과정을 거쳐 연삼
++ split(index를 기준으로 분리) -> apply(함수) -> combine(병합) 과정을 거쳐 연산
 + 결과물의 타입을 Series
 + Hierarchical index : groupby를 하게되면 기준 컬럼의 개수에 따라 index가 생성됨
 ``` python
@@ -21,7 +21,7 @@ h_index.std(level=1) # 특정 레벨로 연산이 가능
 h_index.sum(level=1) # 특정 레벨로 연산이 가능
 h_index.value_counts() # 그룹별 행 수를 구하는 함수
 
-gouped = df.groupby("Team")
+grouped = df.groupby("Team")
 
 for name, group in grouped: # Groupby에 의해 Split된 상태를 추출 가능함
     print(name)
@@ -47,7 +47,7 @@ grouped.agg(np.sum, np.mean, np.std) # 특정 컬럼에 여러개의 function을
 
 # Transformation
 grouped = df.groupby("Team")
-score = lambada x : (x)
+score = lambda x : (x)
 grouped.transform(score) # Grouped 된 상태에서 모든 값들을 지정해주는 함수
 score = lambda x: (x.max())
 grouped.transform(score) # 모든 요소를 보여주나 연산은 Key 값을 기준으로 Grouped처리하여 연산한다.

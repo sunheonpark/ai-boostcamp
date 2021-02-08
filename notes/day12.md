@@ -75,7 +75,7 @@
 
 + Nesterov Accelerate Gradient(NAG)
     + Momentum을 사용하나 추가적인 옵션이 추가된 로직
-    + Lookahead gradient : A라는 정보가 있으면 그 방향으로 가보고 이 방향해서 gradient를 계산한 것을 가지고 반영함
+    + Lookahead gradient : A라는 정보가 있으면 그 방향으로 가보고 이 방향에서 gradient를 계산한 것을 가지고 반영함
     + local minimum으로 빠르게 conversion할 수 있음
 
 ![캡처](https://user-images.githubusercontent.com/44515744/106543089-69158200-6548-11eb-91be-aa0da867fed3.JPG)

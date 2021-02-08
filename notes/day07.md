@@ -8,7 +8,8 @@
 + 벡터가 입력인 다변수 함수의 경우에는 편미분(partial differentiation)을 사용
 + 미분을 계산하려면 함수의 모양이 매끄러워야한다(연속)
 + 미분은 함수 f의 주어진 점 (x, f(x))에서의 접선의 기울기를 구함
-+ ![캡처](https://user-images.githubusercontent.com/44515744/105783942-0f96db80-5fbb-11eb-8b2d-85d5f6a4c62f.JPG)
+
+![캡처](https://user-images.githubusercontent.com/44515744/105783942-0f96db80-5fbb-11eb-8b2d-85d5f6a4c62f.JPG)
 ``` python
 # 미분 계산법
 import sympy as sym

@@ -46,7 +46,8 @@
 
 ![캡처](https://user-images.githubusercontent.com/44515744/108012130-f4fcd300-704b-11eb-9b9a-c255a2e001fa.PNG)
 
-#### 7. Long Short-Term Memory (LSTM)
+### (4강) LSTM and GRU
+#### 1. Long Short-Term Memory (LSTM)
 + RNN이 배운 Gradient Vanishing/Exploding 문제를 하고 타임스텝이 긴 경우에도 정상적으로 학습할 수 있음
 + 타임스텝마다 히든 스테이트 벡터를 단기 기억을 담당하는 기억소자로 볼 수 있음
 + 단기 기억을 시퀀스가 타임스텝별로 진행하는 원리
@@ -63,7 +64,7 @@
 + Gate gate : 탄 함수를 -1~1 거쳐서 -1~1 사이의 벡터로 변환 
 + 한번의 선형변환 만으로 c_{t-1}를 더해줄 정보를 만들어주기 어려울 경우 
 
-#### 8. Gated Recurrent Unit (GRU)
+#### 2. Gated Recurrent Unit (GRU)
 + LSTM의 모델 구조를 경량화해서 빠른 계산이 가능해짐
 + 셀 스테이트 벡터와 히든 스테이트 벡터를 일원화하여 히든 스테이트 벡터만 존재
 + 전체적인 동작원리는 LSTM과 비슷함
@@ -73,11 +74,11 @@
 
 ![캡처](https://user-images.githubusercontent.com/44515744/108014785-fcbf7600-7051-11eb-88f6-d8afcebae828.PNG)
 
-#### 9. Backpropagation in LSTM?GRU 
+#### 3. Backpropagation in LSTM?GRU 
 + 필요한 정보를 곱셈이 아닌 덧셈을 통해서 생성하므로 Gradient Vanishing/Exploding가 해결됨
 + 덧셈은 그레디언트를 그대로 보내므로 길어저도 이전 그레디언트를 그대로 보내줄 수 있음
 
-#### 10. 정리
+#### 4. 정리
 + RNN은 다양한 시퀀스 데이터에 대한 딥 러닝 모델 구조(Original RNN = Vanila RNN)
 + Vanila RNN은 Gradient Vanishing/Exploding 문제가 있음
 + LSTM, GRU는 타임스탭에서 업데이트하는 것이 기본적으로 덧셈에 기반한 연산이기 때문에 위 문제를 해결할 수 있음
